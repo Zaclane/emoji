@@ -3,6 +3,7 @@ const emoji = require('node-Emoji');
 
 
 http.createServer((request, response) => {
+    response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     response.write(emoji.random().emoji);
     response.end();
 }).listen(8080);
@@ -16,3 +17,6 @@ npm install --save *package name*
 git init
 git add .
 git commit -m ""
+
+
+*/
